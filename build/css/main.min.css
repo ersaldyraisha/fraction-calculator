@@ -307,5 +307,96 @@ template {
 [hidden] {
   display: none; }
 
+.spacer {
+  margin-bottom: 1em; }
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+
+.list-item {
+  background: #fff;
+  padding: 0.5em 1em;
+  height: 3em;
+  border-bottom: solid 1px #eaeaea; }
+
+.list-content {
+  line-height: 2em; }
+
+.list-tag {
+  max-width: 200px;
+  background: #42B549;
+  padding: 0.5em 1em;
+  border-radius: 100px;
+  color: #fff; }
+
+.card {
+  display: block;
+  position: relative;
+  padding: 1em; }
+
+.card--green {
+  background: #42B549;
+  color: #fff;
+  padding-top: 5em; }
+
+.card--white {
+  background: #fff; }
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.flex-child {
+  width: 100%; }
+
+.flex--stretch {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.input {
+  display: block;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 2em; }
+  .input::-webkit-input-placeholder {
+    color: #fff;
+    opacity: 0.5; }
+  .input::-moz-placeholder {
+    color: #fff;
+    opacity: 0.5; }
+  .input:-ms-input-placeholder {
+    color: #fff;
+    opacity: 0.5; }
+  .input::-ms-input-placeholder {
+    color: #fff;
+    opacity: 0.5; }
+  .input::placeholder {
+    color: #fff;
+    opacity: 0.5; }
+
+.input-label {
+  display: block; }
+
+.input--full {
+  width: 100%; }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
 body {
-  font-family: sans-serif; }
+  font-family: "Segoe UI", sans-serif;
+  background: #f7f7f7;
+  color: #787878; }
+
+.container {
+  max-width: 500px;
+  margin: 0 auto; }

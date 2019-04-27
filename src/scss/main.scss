@@ -1,6 +1,17 @@
-@import "modules/_modules";
 @import "plugins/_plugins";
+@import "modules/_modules";
+
+* {
+  box-sizing: border-box;
+}
 
 body {
-  font-family: sans-serif;
+  font-family: "Segoe UI", sans-serif;
+  background: $grey;
+  color: $darkGrey;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
 }

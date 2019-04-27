@@ -7,11 +7,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="../css/main.min.css" />
 </head>
-<body>
-  
-  <h1>Hi There!</h1>
-  <p>Enjoy coding :)</p>
+<body ng-app="fraction-calc">
+ 
+  <section class="container" ng-controller="calcCtrl">
 
+    <div class="card card--green">
+      <div class="card-content">
+        <form ng-submit="calculateFractions()">
+          <label class="input-label" for="moneyInput">Amount of Money</label>
+          <input class="input input--full" id="moneyInput" type="text" ng-model="input" placeholder="Rp 0" autofocus/>
+        </form>
+      </div>
+    </div>
+
+    <ul class="list flex">
+      <li class="list-item flex-child flex flex--stretch" ng-repeat="(key, fraction) in countedFractions" ng-if="key!=='remainder'">
+        <div class="list-content">
+          <span>Rp </span>
+          <span ng-bind="key"></span>
+        </div>
+        <div class="list-tag">
+          <strong>
+            <span>x</span>
+            <span ng-bind="fraction"></span>
+          </strong>
+        </div>
+      </li>
+      <li ng-if="countedFractions.remainder">
+        <p>Remainder: <strong>Rp <span ng-bind="countedFractions.remainder"></span></strong></p>
+      </li>
+    </ul>
+      
+  </section>
+
+  <script src="../js/plugins/angular.min.js"></script>
   <script src="../js/main.min.js"></script>
 </body>
 </html>

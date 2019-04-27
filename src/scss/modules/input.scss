@@ -1,0 +1,21 @@
+.input {
+  display: block;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: $white;
+  font-size: $space * 2;
+
+  &::placeholder {
+    color: $white;
+    opacity: 0.5;
+  }
+}
+
+.input-label {
+  display: block;
+}
+
+.input--full {
+  width: 100%;
+}

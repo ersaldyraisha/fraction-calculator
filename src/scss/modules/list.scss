@@ -1,0 +1,24 @@
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; 
+}
+
+.list-item {
+  background: $white;
+  padding: $space/2 $space;
+  height: $space*3;
+  border-bottom: solid 1px $mediumGrey;
+}
+
+.list-content {
+  line-height: $space*2;
+}
+
+.list-tag {
+  max-width: 200px;
+  background: $green;
+  padding: $space/2 $space;
+  border-radius: 100px;
+  color: $white;
+}

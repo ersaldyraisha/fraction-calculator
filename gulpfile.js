@@ -44,7 +44,8 @@ gulp.task('html', gulp.parallel('images', () => {
 gulp.task('js', () => {
   let jsbuild = gulp
     .src(folder.src + 'js/**/*')
-    .pipe(concat('main.min.js'))
+    .pipe(rename({suffix: '.min'}))
+    //.pipe(concat('main.min.js'))
 
   if (!devBuild) {
     jsbuild = jsbuild

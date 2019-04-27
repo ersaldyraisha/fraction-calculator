@@ -1,0 +1,15 @@
+.card {
+  display: block;
+  position: relative;
+  padding: $space;
+}
+
+.card--green {
+  background: $green;
+  color: $white;
+  padding-top: $space * 5;
+}
+
+.card--white {
+  background: $white;
+}
