@@ -1,5 +1,6 @@
 const
   gulp = require('gulp'),
+  babel = require('gulp-babel'),
   newer = require('gulp-newer'),
   imagemin = require('gulp-imagemin'),
   htmlclean = require('gulp-htmlclean'),
@@ -30,7 +31,7 @@ gulp.task('images', () => {
 
 gulp.task('html', gulp.parallel('images', () => {
   const out = folder.build + 'html/'
-  const page = gulp
+  let page = gulp
       .src(folder.src + 'html/**/*')
       .pipe(newer(out))
 
@@ -44,14 +45,14 @@ gulp.task('html', gulp.parallel('images', () => {
 gulp.task('js', () => {
   let jsbuild = gulp
     .src(folder.src + 'js/**/*')
+    .pipe(babel())
     .pipe(rename({suffix: '.min'}))
-    //.pipe(concat('main.min.js'))
 
   if (!devBuild) {
     jsbuild = jsbuild
       .pipe(uglify())
   }
-
+ 
   return jsbuild.pipe(gulp.dest(folder.build + 'js/'))
 })
 
