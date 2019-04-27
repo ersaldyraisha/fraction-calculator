@@ -49,7 +49,6 @@
       
       if (countedFractions) {
         $scope.countedFractions = Object.assign(countedFractions)
-        console.log(countedFractions)
       } else {
         $scope.countedFractions = {}
         alert('Invalid input')
