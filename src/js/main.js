@@ -3,7 +3,7 @@
   angular.module('FractionCalc', [])
   
   .controller('CalcController', ['$scope', ($scope) => {
-    $scope.fractions = [100000, 50000, 20000, 10000, 5000, 2000, 1000, 500, 200, 100]
+    $scope.fractions = [100000, 50000, 20000, 10000, 5000, 1000, 500, 100, 50]
     $scope.countedFractions = {}
     $scope.input = ''
 
