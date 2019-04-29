@@ -2,9 +2,10 @@
   "name": "fraction-calculator",
   "version": "1.0.0",
   "description": "Rupiah fraction generator",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"no test specified\" && exit 1"
+    "build": "npm install --production",
+    "start": "node server.js",
+    "test": "karma start"
   },
   "repository": {
     "type": "git",
@@ -12,14 +13,12 @@
   },
   "author": "Andi Ersaldy",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ersaldyraisha/fraction-calculator/issues"
-  },
   "homepage": "https://github.com/ersaldyraisha/fraction-calculator#readme",
   "devDependencies": {
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "autoprefixer": "^9.5.1",
+    "babel": "^6.23.0",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
     "gulp": "^4.0.1",
@@ -32,6 +31,9 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
+    "jasmine-core": "^3.4.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^2.0.1",
     "postcss-assets": "^5.0.0"
   },
   "dependencies": {

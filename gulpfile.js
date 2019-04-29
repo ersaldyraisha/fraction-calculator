@@ -4,7 +4,6 @@ const
   newer = require('gulp-newer'),
   imagemin = require('gulp-imagemin'),
   htmlclean = require('gulp-htmlclean'),
-  concat = require('gulp-concat'),
   uglify = require('gulp-uglify'),
   sass = require('gulp-sass'),
   rename = require('gulp-rename'),
@@ -46,7 +45,6 @@ gulp.task('js', () => {
   let jsbuild = gulp
     .src(folder.src + 'js/**/*')
     .pipe(babel())
-    .pipe(rename({suffix: '.min'}))
 
   if (!devBuild) {
     jsbuild = jsbuild
